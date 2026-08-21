@@ -1,0 +1,64 @@
+{
+  // ===== EDITOR =====
+  "editor.fontFamily": "'Fira Code', Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  // ===== FILES =====
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // ===== PYTHON =====
+  "python.defaultInterpreterPath": "c:\\Users\\gabriel\\AppData\\Local\\Microsoft\\WindowsApps\\python3.13.exe",
+
+  // ===== APARÊNCIA =====
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "symbols",
+  "workbench.sideBar.location": "right",
+  "workbench.colorCustomizations": {},
+
+  // ===== BREADCRUMBS =====
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.filePath": "off",
+  "cSpell.language": "en,pt,pt-BR",
+  "cSpell.languageSettings": [],
+
+  // ===== GITLENS — CONFIGURAÇÃO EQUILIBRADA =====
+
+  // Desativa o blame inline automático (aquela linha cinza em toda linha do código)
+  // Você ainda vê o blame quando quiser: passe o mouse sobre a linha
+  "gitlens.currentLine.enabled": false,
+
+  // Desativa o CodeLens (os "X authors, Y changes" em cima de cada função/classe)
+  "gitlens.codeLens.enabled": false,
+
+  // Mantém o hover ativo — passar o mouse na linha ainda mostra quem mudou e quando
+  "gitlens.hovers.currentLine.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+
+  // Desativa a heatmap de "idade do código" na régua lateral
+  "gitlens.heatmap.enabled": false,
+
+  // Mantém a barra de status (embaixo, mostra branch atual) — discreta e útil
+  "gitlens.statusBar.enabled": true,
+  "gitlens.statusBar.command": "gitlens.showQuickFileHistory",
+
+  // Desativa avatares na gutter blame
+  "gitlens.blame.avatars": false,
+
+  // Impede a view "Commit Details" de abrir sozinha
+  "gitlens.views.commitDetails.autoOpen": false,
+
+  // Layout do GitLens Graph
+  "gitlens.graph.layout": "editor",
+}

@@ -1,0 +1,206 @@
+[
+  // ===== NAVEGAÇÃO =====
+
+  // Abre busca rápida de arquivos por nome — o atalho que você mais vai usar
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen",
+  },
+
+  // Busca símbolos (classes, funções, métodos) em todo o projeto
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.showAllSymbols",
+  },
+
+  // Busca símbolos só dentro do arquivo atual (útil em service/controller grandes)
+  {
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.gotoSymbol",
+  },
+
+  // Vai até a definição de uma função/classe/variável
+  {
+    "key": "f12",
+    "command": "editor.action.revealDefinition",
+  },
+
+  // Vai até a implementação de uma interface (ex: pular de um Repository para sua implementação real)
+  {
+    "key": "ctrl+f12",
+    "command": "editor.action.goToImplementation",
+  },
+
+  // Mostra todos os lugares onde algo é usado (ex: onde um service é injetado)
+  {
+    "key": "shift+f12",
+    "command": "editor.action.referenceSearch.trigger",
+  },
+
+  // Volta para o cursor/arquivo anterior (como o "voltar" do navegador)
+  {
+    "key": "alt+left",
+    "command": "workbench.action.navigateBack",
+  },
+
+  // Avança de novo depois de ter voltado
+  {
+    "key": "alt+right",
+    "command": "workbench.action.navigateForward",
+  },
+
+  // ===== EDIÇÃO =====
+
+  // Duplica a linha atual para baixo (ótimo pra criar DTOs/decorators parecidos)
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+
+  // Duplica a linha atual para cima
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+
+  // Move a linha inteira para cima (reordenar imports, propriedades, etc)
+  {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+
+  // Move a linha inteira para baixo
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+
+  // Renomeia uma variável/classe/método em todos os lugares que ela é usada
+  {
+    "key": "f2",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
+  },
+
+  // Formata o arquivo inteiro (aciona o Prettier)
+  {
+    "key": "shift+f",
+    "command": "editor.action.formatDocument",
+  },
+
+  // Abre sugestões de correção rápida (ex: importar automaticamente, corrigir erro do ESLint)
+  {
+    "key": "ctrl+.",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly",
+  },
+
+  // Seleciona a próxima ocorrência igual à palavra atual (multi-cursor, tipo Ctrl+D do Sublime)
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus",
+  },
+
+  // Seleciona TODAS as ocorrências da palavra atual de uma vez (renomear manual em massa)
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus",
+  },
+
+  // Comenta/descomenta a linha atual (// no TS)
+  {
+    "key": "ctrl+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+
+  // ===== TERMINAL =====
+
+  // Mostra/esconde o terminal integrado
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.toggleTerminal",
+  },
+
+  // Abre um novo terminal (útil pra rodar API + testes em paralelo)
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.new",
+  },
+
+  // Divide o terminal atual em dois painéis lado a lado
+  {
+    "key": "ctrl+shift+5",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus",
+  },
+
+  // ===== LAYOUT / VISUALIZAÇÃO =====
+
+  // Divide o editor em duas colunas (ótimo pra ver .ts e .spec.ts lado a lado)
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.splitEditor",
+  },
+
+  // Mostra/esconde a barra lateral (mais espaço pra código quando precisar)
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
+
+  // Foca na árvore de arquivos (Explorer)
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer",
+  },
+
+  // Foca na aba de controle de versão (Git — ver mudanças, fazer commit)
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.view.scm",
+  },
+
+  // Foca na aba de debug (rodar com breakpoints)
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.view.debug",
+  },
+
+  // Foca na aba de extensões
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.view.extensions",
+  },
+
+  // ===== TESTES (Jest) =====
+
+  // Roda a task "test:watch" configurada no projeto (testes em modo observador)
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.tasks.runTask",
+    "args": "test:watch",
+  },
+
+  // ===== MULTI-CURSOR VERTICAL =====
+
+  // Adiciona um cursor na linha de baixo (editar várias linhas ao mesmo tempo)
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus",
+  },
+
+  // Adiciona um cursor na linha de cima
+  {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus",
+  },
+]
