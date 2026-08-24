@@ -16,7 +16,7 @@ vscode-dotfiles/
 
 ---
 
-## 🖥️ Configurando uma MÁQUINA NOVA (do zero)
+## Configurando uma MÁQUINA NOVA (do zero)
 
 Abra o PowerShell **como Administrador**:
 
@@ -38,7 +38,7 @@ Depois só reiniciar o VS Code.
 
 ---
 
-## 🔄 Atualizando o backup (na máquina do dia a dia)
+## Atualizando o backup (na máquina do dia a dia)
 
 Você **não precisa mexer manualmente** em `settings.json` nem `keybindings.json` — como são links simbólicos, qualquer mudança feita pela interface do VS Code já grava direto no repositório.
 
@@ -56,7 +56,7 @@ Faça isso sempre que instalar ou remover uma extensão.
 
 ---
 
-## ❓ Perguntas frequentes
+## Perguntas frequentes
 
 **Preciso apagar o settings.json/keybindings.json manualmente?**
 Não, na máquina atual (que já tem os links funcionando) não mexe em nada. Numa máquina **nova**, o `setup-nova-maquina.ps1` já remove os arquivos padrão e recria como link simbólico — é automático.
@@ -72,6 +72,6 @@ O `install-extensions.ps1` lista no final quais falharam (se houver). Basta inst
 
 ---
 
-## 📦 Extensões incluídas (33)
+## Extensões incluídas (33)
 
 Produtividade geral, temas, Nest/TypeScript, Docker e qualidade de código — a lista completa está em `extensions.txt` e é sempre a fonte da verdade (gerada direto da máquina, sem digitação manual).
